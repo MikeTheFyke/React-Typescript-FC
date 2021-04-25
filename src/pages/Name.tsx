@@ -1,15 +1,16 @@
 import React from 'react';
 
 interface Props {
-    count?: number;
+    isShowing?: boolean;
 };
 
 
-export const Name: React.FC<Props> = ({ count }) =>{
+export const Name: React.FC<Props> = () =>{
+    const isShowing  = React.useState(false);
 
     return (
         <div>
-            <h1>My Name</h1>
+             {{isShowing : true && <h1 >My Name</h1>}}
         </div>
     );
 };

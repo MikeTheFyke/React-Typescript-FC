@@ -3,17 +3,12 @@ import './App.css';
 
 import { Name } from './pages/Name';
 
-const App: React.FC =() => {
-
-function Show () {
-  return (
-    <Name />
-  )
-}
+const App: React.FC = () => {
 
   return (
     <div className="App">
-        <button onClick={Show}>Show</button>
+        <Name />
+        <button onClick={() => ({isShowing : true})}>Click</button>
     </div>
   );
 }
